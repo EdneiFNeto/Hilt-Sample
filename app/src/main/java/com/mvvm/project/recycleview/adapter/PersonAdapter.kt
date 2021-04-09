@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.mvvm.project.databinding.TesteLayoutBinding
+import com.mvvm.project.model.Data
 import com.mvvm.project.model.Person
 import java.util.*
 
@@ -15,8 +16,8 @@ class PersonAdapter(private val context: Context?, private val list: ArrayList<P
 
         private  lateinit var person: Person
 
-        fun add(person: Person){
-            this.person = person
+        fun add(data: Person){
+            this.person = data
             viewDataBinding.person = person
         }
     }

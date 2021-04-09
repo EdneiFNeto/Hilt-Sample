@@ -19,7 +19,7 @@
 
         <ImageView
                 android:scaleType="fitXY"
-                app:carregaImagem="@{person.image}"
+                app:carregaImagem="@{person.image_url}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:src="@drawable/ic_avatar"
@@ -33,7 +33,7 @@
                 android:textColor="@color/primaryTextColor"
                 android:layout_marginTop="12sp"
                 android:textAlignment="center"
-                android:text="@{person.firstname}"
+                android:text="@{person.name}"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 tools:text="@tools:sample/full_names"

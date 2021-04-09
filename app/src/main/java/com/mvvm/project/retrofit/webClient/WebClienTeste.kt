@@ -3,6 +3,7 @@ package com.mvvm.project.retrofit.webClient
 import android.content.Context
 import com.mvvm.project.constraints.REQUISICAO_NAO_SUCEDIDA
 import com.mvvm.project.model.Data
+import com.mvvm.project.model.Person
 import com.mvvm.project.model.Teste
 import com.mvvm.project.retrofit.AppRetrofit
 import com.mvvm.project.retrofit.service.TesteService
@@ -40,7 +41,7 @@ class WebClienTeste(private val context: Context,
     }
 
     fun list(
-        quandoSucesso: (list: Data) -> Unit,
+        quandoSucesso: (list: List<Person>) -> Unit,
         quandoFalha: (error: String?) -> Unit
     ) {
         executaRequisicao(service.list(), quandoSucesso, quandoFalha)

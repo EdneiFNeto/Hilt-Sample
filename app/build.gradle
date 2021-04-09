@@ -30,7 +30,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug{
-            buildConfigField('String', 'URL_FAKE_API', '"https://fakerapi.it/api/v1/"')
+            buildConfigField('String', 'URL_FAKE_API', '"https://raw.githubusercontent.com/myfreecomm/desafio-mobile-android/master/api/"')
         }
         simulado{
             initWith(buildTypes.debug)

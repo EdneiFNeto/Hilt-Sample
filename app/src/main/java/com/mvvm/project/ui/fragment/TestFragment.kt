@@ -1,7 +1,6 @@
 package com.mvvm.project.ui.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +13,7 @@ import com.mvvm.project.ui.fragment.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_test.*
 
 class TestFragment : BaseFragment() {
-    private var testeAdapter: PersonAdapter? = null
+    private var dataAdapter: PersonAdapter? = null
     private val testes = ArrayList<Person>()
     private var viewDataBinging: FragmentTestBinding? = null
 
@@ -28,13 +27,12 @@ class TestFragment : BaseFragment() {
 
     override fun initViewModel() {
         viewModelTeste.list().observe(viewLifecycleOwner, Observer {
-            Log.i("Resources", it.dado.toString())
             if (it.dado != null) {
-                var data = it.dado as Data
-                data.data.forEach { teste ->
-                    testes.add(teste)
+                var data = it.dado as List<Person>
+                data.forEach { it ->
+                    testes.add(it)
                 }.also {
-                    testeAdapter?.notifyDataSetChanged()
+                    dataAdapter?.notifyDataSetChanged()
                 }
             }
         })
@@ -42,10 +40,10 @@ class TestFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        testeAdapter = PersonAdapter(context, testes)
+        dataAdapter = PersonAdapter(context, testes)
 
         recycleViewTeste.run {
-            adapter = testeAdapter
+            adapter = dataAdapter
         }
 
         initViewModel()
