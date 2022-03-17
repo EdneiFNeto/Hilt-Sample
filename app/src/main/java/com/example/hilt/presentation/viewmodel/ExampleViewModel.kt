@@ -3,10 +3,9 @@ package com.example.hilt.presentation.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.hilt.domain.User
-import com.example.hilt.netiwork.ApiService
-import com.example.hilt.netiwork.ExampleService
-import com.example.hilt.netiwork.model.Images
+import com.example.hilt.domain.model.User
+import com.example.hilt.network.ExampleService
+import com.example.hilt.network.model.Images
 import com.example.hilt.presentation.viewmodel.base.ViewModelHelper
 import com.example.hilt.repository.ExampleRepositoryImpl
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -22,10 +21,10 @@ class ExampleViewModel @Inject constructor(
     private val images = MutableLiveData<Images>()
 
     init {
-        allEntitys()
+        getImagesApi()
     }
 
-    override fun allEntitys(){
+    override fun getImagesApi(){
         viewModelScope.launch {
             var countries = service.all()
             if (countries.isSuccessful) {

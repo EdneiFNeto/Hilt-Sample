@@ -1,4 +1,4 @@
-package com.example.hilt.netiwork.model
+package com.example.hilt.network.model
 
 import com.google.gson.annotations.SerializedName
 

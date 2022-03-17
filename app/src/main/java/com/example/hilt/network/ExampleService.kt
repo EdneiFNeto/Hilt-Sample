@@ -1,6 +1,6 @@
-package com.example.hilt.netiwork
+package com.example.hilt.network
 
-import com.example.hilt.netiwork.model.Images
+import com.example.hilt.network.model.Images
 import retrofit2.Response
 import retrofit2.http.GET
 

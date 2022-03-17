@@ -1,6 +1,6 @@
 package com.example.hilt.di
 
-import com.example.hilt.netiwork.ExampleService
+import com.example.hilt.network.ExampleService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

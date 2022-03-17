@@ -1,9 +1,8 @@
 package com.example.hilt.repository
 
 import androidx.lifecycle.MutableLiveData
-import com.example.hilt.domain.User
+import com.example.hilt.domain.model.User
 import com.example.hilt.domain.database.dao.UserDao
-import com.example.hilt.netiwork.ExampleService
 import com.example.hilt.util.LauncherUtil
 import javax.inject.Inject
 

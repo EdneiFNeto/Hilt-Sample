@@ -1,11 +1,10 @@
 package com.example.hilt.presentation.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hilt.R
-import com.example.hilt.domain.User
+import com.example.hilt.domain.model.User
 import com.example.hilt.presentation.viewmodel.ExampleViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
